@@ -1,12 +1,12 @@
 Summary:	Replacement for KDE clock
 Summary(pl):	Zamiennik zegara dla KDE
 Name:		styleclock
-Version:	0.3.1
-Release:	2
+Version:	0.5.1
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://fred.hexbox.de/styleclock/%{name}-%{version}.tar.gz
-# Source0-md5:	8459613854cefdb3cf962b88cd716f53
+# Source0-md5:	8fa2a382239e61d6ad0c2d23a70ef1cd
 URL:		http://fred.hexbox.de/styleclock/
 BuildRequires:	automake
 BuildRequires:	kdelibs-devel

@@ -8,7 +8,9 @@ Group:		X11/Applications
 Source0:	http://fred.hexbox.de/styleclock/%{name}-%{version}.tar.gz
 # Source0-md5:	8459613854cefdb3cf962b88cd716f53
 URL:		http://fred.hexbox.de/styleclock/
+BuildRequires:	automake
 BuildRequires:	kdelibs-devel
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,21 +25,28 @@ zegara KDE. Mo¿na do niego szybko i elastycznie stworzyæ motyw.
 %setup -q
 
 %build
-%configure
+cp -f /usr/share/automake/config.* admin
+%configure \
+	--disable-rpath \
+	--with-qt-libraries=%{_libdir}
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	kde_htmldir=%{_kdedocdir}
+
+%find_lang fashionclock --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f fashionclock.lang
 %defattr(644,root,root,755)
 %doc README AUTHORS ChangeLog
-%{_datadir}/*
-%attr(755,root,root) %{_libdir}/libstyleclock.la
 %attr(755,root,root) %{_libdir}/libstyleclock.so
+%{_libdir}/libstyleclock.la
+%{_datadir}/apps/styleclock
+%{_datadir}/apps/kicker/applets/styleclock.desktop

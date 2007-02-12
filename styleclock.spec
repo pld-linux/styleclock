@@ -1,5 +1,5 @@
 Summary:	Replacement for KDE clock
-Summary(pl.UTF-8):   Zamiennik zegara dla KDE
+Summary(pl.UTF-8):	Zamiennik zegara dla KDE
 Name:		styleclock
 Version:	0.5.1
 Release:	1

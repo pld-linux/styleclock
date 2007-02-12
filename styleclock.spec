@@ -1,5 +1,5 @@
 Summary:	Replacement for KDE clock
-Summary(pl):	Zamiennik zegara dla KDE
+Summary(pl.UTF-8):   Zamiennik zegara dla KDE
 Name:		styleclock
 Version:	0.5.1
 Release:	1
@@ -17,9 +17,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 StyleClock is a incomplete, but better-looking replacement for the
 regular KDE clock. It is easily and flexibly themable.
 
-%description -l pl
-StyleClock jest niekompletnym, ale ³adniej wygl±daj±cym zamiennikiem
-zegara KDE. Mo¿na do niego szybko i elastycznie stworzyæ motyw.
+%description -l pl.UTF-8
+StyleClock jest niekompletnym, ale Å‚adniej wyglÄ…dajÄ…cym zamiennikiem
+zegara KDE. MoÅ¼na do niego szybko i elastycznie stworzyÄ‡ motyw.
 
 %prep
 %setup -q
